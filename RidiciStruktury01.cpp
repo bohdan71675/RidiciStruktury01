@@ -32,7 +32,7 @@ int main()
                     mocnina *= a;
                 }
             }
-            cout << "\n\nMocnina je " << (int)mocnina << endl << endl;
+            cout << "\n\nMocnina je: " << (int)mocnina << endl << endl;
 
          }
          break;
@@ -47,7 +47,7 @@ int main()
                  cifSoucet += n % 10;
                  n /= 10;
              }
-             cout << "\n\nCiferny soucet je " << (int)cifSoucet << endl << endl;
+             cout << "\n\nCiferny soucet je: " << (int)cifSoucet << endl << endl;
          }
          break;
          default:
