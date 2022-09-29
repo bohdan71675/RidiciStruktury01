@@ -10,20 +10,22 @@ int main()
     cin >> volba;
     while (volba != 'K')
     {
-       cout << "\nM=Mocnina, S=Ciferny soucet, K=Konec: ";
        switch (volba)
        {
          case 'M':
          {
             double a = 1 + (10 - 1) * (double)rand() / (RAND_MAX + 1);
+            cout << a << endl;
             int n = -5 + rand() % (5 - (-5) + 1);
+            cout << n << endl;
             double mocnina = 1;
             if (n < 0)
             {
                 for (int i = n; n < 0; n++)
                 {
-                    mocnina *= 1 / a;
+                    mocnina *= a;
                 }
+                mocnina = 1 / mocnina;
             }
             else
             {
@@ -32,7 +34,7 @@ int main()
                     mocnina *= a;
                 }
             }
-            cout << "\n\nMocnina je: " << (int)mocnina << endl << endl;
+            cout << "\n\nMocnina je: " << mocnina << endl << endl;
 
          }
          break;
@@ -47,7 +49,7 @@ int main()
                  cifSoucet += n % 10;
                  n /= 10;
              }
-             cout << "\n\nCiferny soucet je: " << (int)cifSoucet << endl << endl;
+             cout << "\n\nCiferny soucet je: " << cifSoucet << endl << endl;
          }
          break;
          default:
@@ -56,6 +58,7 @@ int main()
          }
          break;
        }
+       cout << "\nM=Mocnina, S=Ciferny soucet, K=Konec: ";
        cin >> volba;
     }
 }
