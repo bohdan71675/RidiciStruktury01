@@ -19,20 +19,14 @@ int main()
             int n = -5 + rand() % (5 - (-5) + 1);
             cout << n << endl;
             double mocnina = 1;
+            int N = abs(n);
+            for (int i = 0; i < N; i++)
+            {
+                mocnina *= a;
+            }
             if (n < 0)
             {
-                for (int i = n; n < 0; n++)
-                {
-                    mocnina *= a;
-                }
                 mocnina = 1 / mocnina;
-            }
-            else
-            {
-                for (int i = 0; i < n; i++)
-                {
-                    mocnina *= a;
-                }
             }
             cout << "\n\nMocnina je: " << mocnina << endl << endl;
 
