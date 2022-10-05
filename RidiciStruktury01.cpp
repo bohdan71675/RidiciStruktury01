@@ -19,12 +19,12 @@ int main()
             int n = -5 + rand() % (5 - (-5) + 1);
             cout << n << endl;
             double mocnina = 1;
-            int N = abs(n);
-            for (int i = 0; i < N; i++)
+            int N = abs(n);   //potrebuju kladny exponent
+            for (int i = 0; i < N; i++)  // pocitame mocninu na kladny exponent
             {
                 mocnina *= a;
             }
-            if (n < 0)
+            if (n < 0)  //pokud byl puvodni exponent zaporny mocninu prevratim
             {
                 mocnina = 1 / mocnina;
             }
@@ -38,7 +38,7 @@ int main()
              cout << "Zadej nezaporne cislo: ";
              cin >> n;
              int cifSoucet = 0;
-             if (n > 0)
+             while (n > 0)
              {
                  cifSoucet += n % 10;
                  n /= 10;
